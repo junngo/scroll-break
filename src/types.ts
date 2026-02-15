@@ -5,7 +5,7 @@ export interface ExtensionSettings {
 }
 
 export const DEFAULT_SETTINGS: ExtensionSettings = {
-  limitMinutes: 5,
+  limitMinutes: 1,
   cooldownMinutes: 10,
   overlayStyle: "modal",
 };

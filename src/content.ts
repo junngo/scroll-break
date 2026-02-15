@@ -2,6 +2,7 @@ import "./content/overlay.css";
 import type { ExtensionSettings } from "./types";
 import { getSettings, getLastDismissed, setLastDismissed } from "./storage";
 
+console.log("Scroll Break: Content script loaded!");
 const TICK_MS = 1000;
 
 function isShortsPage(): boolean {
@@ -52,10 +53,11 @@ function createOverlay(settings: ExtensionSettings, onDismiss: () => void): void
 }
 
 function main(): void {
+  console.log("Scroll Break: main() started");
   let accumulatedSeconds = 0;
   let overlayShown = false;
   let settings: ExtensionSettings = {
-    limitMinutes: 5,
+    limitMinutes: 1,
     cooldownMinutes: 10,
     overlayStyle: "modal",
   };

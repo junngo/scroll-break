@@ -1,17 +1,19 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 
+/** Builds content script as IIFE so it works in browser extension content scripts. */
 export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: false,
     rollupOptions: {
       input: {
-        popup: resolve(__dirname, "src/popup/popup.html"),
+        content: resolve(__dirname, "src/content.ts"),
       },
       output: {
-        entryFileNames: "[name].js",
-        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "content.js",
+        format: "iife",
+        inlineDynamicImports: true,
         assetFileNames: (assetInfo) =>
           assetInfo.name?.includes("overlay") ? "content.css" : "assets/[name]-[hash][extname]",
       },
@@ -20,3 +22,4 @@ export default defineConfig({
     target: "esnext",
   },
 });
+
