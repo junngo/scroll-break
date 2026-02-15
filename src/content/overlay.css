@@ -1,0 +1,74 @@
+/* Injected overlay - only used when overlay is shown */
+#scroll-break-overlay-root {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  font-family: "YouTube Sans", "Roboto", Arial, sans-serif;
+  pointer-events: auto;
+}
+
+#scroll-break-overlay-root .scroll-break-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scroll-break-overlay-root .scroll-break-modal {
+  background: #212121;
+  color: #f1f1f1;
+  border-radius: 12px;
+  padding: 28px 32px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+#scroll-break-overlay-root .scroll-break-modal h2 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#scroll-break-overlay-root .scroll-break-modal p {
+  margin: 0 0 24px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+#scroll-break-overlay-root .scroll-break-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#scroll-break-overlay-root .scroll-break-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+#scroll-break-overlay-root .scroll-break-btn-primary {
+  background: #f00;
+  color: #fff;
+}
+
+#scroll-break-overlay-root .scroll-break-btn-primary:hover {
+  background: #cc0000;
+}
+
+#scroll-break-overlay-root .scroll-break-btn-secondary {
+  background: #3f3f3f;
+  color: #f1f1f1;
+}
+
+#scroll-break-overlay-root .scroll-break-btn-secondary:hover {
+  background: #505050;
+}

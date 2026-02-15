@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=400, height=360" />
+  <title>Scroll Break</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup">
+    <h1>Scroll Break</h1>
+    <p class="subtitle">Take a break from YouTube Shorts</p>
+
+    <div class="field">
+      <label for="limit">Break after (minutes)</label>
+      <input type="number" id="limit" min="1" max="120" step="1" />
+    </div>
+
+    <div class="field">
+      <label for="cooldown">Cooldown after dismiss (minutes)</label>
+      <input type="number" id="cooldown" min="1" max="120" step="1" />
+    </div>
+
+    <div class="field">
+      <label for="style">Overlay style</label>
+      <select id="style">
+        <option value="modal">Black overlay + modal</option>
+        <option value="pause_and_modal">Pause video + overlay</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button type="button" id="save">Save</button>
+    </div>
+    <p id="status" class="status"></p>
+  </div>
+  <script type="module" src="popup.ts"></script>
+</body>
+</html>
