@@ -59,7 +59,7 @@ Overlay is only shown on Shorts pages and is fully dismissible; state is persist
 ### Build
 
 - **Vite** bundles the extension: TypeScript → JS, CSS from content script and popup. No external servers or runtime dependencies.
-- **Manifest V3** with a service worker (background), content script, and action popup. The same build works in Chrome and Firefox; Firefox uses `browser_specific_settings.gecko` in the manifest.
+- **Manifest V3** with a single manifest for both browsers. The background script is built as IIFE so it can be used as both `background.scripts` (Firefox) and `background.service_worker` (Chrome). Firefox uses `browser_specific_settings.gecko` in the manifest.
 
 ## Run instructions
 

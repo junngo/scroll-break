@@ -6,8 +6,8 @@
   "permissions": ["storage"],
   "host_permissions": ["*://*.youtube.com/*"],
   "background": {
-    "service_worker": "background.js",
-    "type": "module"
+    "scripts": ["background.js"],
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
